@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+<!-- Video Modal Start -->
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                seyhun
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <!-- 16:9 aspect ratio -->
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Video Modal End -->
+<!-- Header Start -->
+<!-- Header End -->
+@await Component.InvokeAsync("HeaderPartials")
+<!-- About Start -->
+@await Component.InvokeAsync("AboutPartial")
+
+<!-- About End -->
+<!-- Qualification Start -->
+@await Component.InvokeAsync("ExperiencePartial")
+
+<!-- Qualification End -->
+<!-- Skill Start -->
+@await Component.InvokeAsync("SkillPartial")
+
+<!-- Skill End -->
+<!-- Services Start -->
+@await Component.InvokeAsync("ServicePartial")
+
+<!-- Services End -->
+<!-- Portfolio Start -->
+@*@await Component.InvokeAsync("PortfolioPartial")*@
+
+<!-- Portfolio End -->
+<!-- Blog Start -->
+@*@await Component.InvokeAsync("BlogPartial")*@
+
+<!-- Blog End -->
+<!-- Contact Start -->
+@*@await Component.InvokeAsync("ContactPartial")*@
+@await Html.PartialAsync("/Views/Default/Contact.cshtml")
+
+<!-- Contact End --> 

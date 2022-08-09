@@ -1,0 +1,37 @@
+﻿@model EntityLayer.Abstract.EducationAndExpericence
+@{
+    ViewData["Title"] = "EgitimGüncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>EgitimGüncelle</h1>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.EducationAndExpericenceID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.EducationAndExpericenceTitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Küçük Başlık")
+    @Html.TextAreaFor(x => x.EducationAndExpericenceLittleTitle, 10, 3, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.EducationAndExpericenceDescription, 10, 3, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("İçerik")
+    @Html.TextAreaFor(x => x.EducationAndExpericenceDate, 10, 3, new { @class = "form-control" })
+    <br />
+    <div class="form-field email">
+        <label class="label" for="email">Deneyim mi eğitim seçiniz *</label>
+        <select name="title" required>
+            <option value="Expericence">Expericence</option>
+            <option value="Education">Education</option>
+        </select>
+    </div>
+    <button class="btn btn-info">Güncelle</button>
+
+
+
+</form>

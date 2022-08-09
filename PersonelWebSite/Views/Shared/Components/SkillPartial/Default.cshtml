@@ -1,0 +1,28 @@
+﻿@using EntityLayer.Abstract
+@model List<Skil>
+<div class="container-fluid py-5" id="skill">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
+            <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
+        </div>
+       
+
+        <div class="row align-items-center">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6">
+                    <div class="py-1">
+                        <div class="d-flex text-small fw-bolder"><span class="me-auto">@item.SkilsTitle</span><span>@item.SkilsRatio%</span></div>
+                        <div class="progress my-1">
+                            <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="100" data-aos-anchor=".skills-section" style="width: @item.SkilsRatio%" aria-valuenow="@item.SkilsRatio" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                </div>
+            }
+                
+            </div>
+
+    </div>
+</div>

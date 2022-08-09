@@ -1,0 +1,17 @@
+﻿@using EntityLayer.Abstract
+@model Skil
+@{
+    ViewData["Title"] = "SkillEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="form-group m-4" method="post">
+    @Html.LabelFor(x => x.SkilsRatio)
+    @Html.TextBoxFor(x => x.SkilsRatio, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.SkilsTitle)
+    @Html.TextBoxFor(x => x.SkilsTitle, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Ekle</button>
+</form>

@@ -1,0 +1,32 @@
+﻿@using EntityLayer.Abstract
+@model List<Service>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Service</h1>
+
+<table class="table table-bordered">
+    <tr>
+
+        <th>Başlık</th>
+        <th>Oran</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ServicesTitle</td>
+            <td>@item.ServicesDescription</td>
+            <td>
+                @Html.ActionLink("SİL", "ServiceDelete", "Service", new { area = "Member", id = item.ServicesID })
+            </td>
+            <td>
+                @Html.ActionLink("Güncelle", "ServiceGüncelle", "Skill", new { area = "Member", id = item.ServicesID })
+            </td>
+        </tr>
+    }@*571632Reis.*@
+</table>

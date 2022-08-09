@@ -1,0 +1,30 @@
+﻿@using EntityLayer.Abstract
+@model EducationAndExpericence
+@{
+    ViewData["Title"] = "EgitimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="form-group m-4" method="post">
+    @Html.LabelFor(x => x.EducationAndExpericenceTitle)
+    @Html.TextBoxFor(x => x.EducationAndExpericenceTitle, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.EducationAndExpericenceLittleTitle)
+    @Html.TextBoxFor(x => x.EducationAndExpericenceLittleTitle, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.EducationAndExpericenceDescription)
+    @Html.TextBoxFor(x => x.EducationAndExpericenceDescription, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.EducationAndExpericenceDate)
+    @Html.TextBoxFor(x => x.EducationAndExpericenceDate, new { @class = "form-control" })
+    <br />
+
+    <div class="form-field email">
+        <label class="label" for="email">Deneyim mi eğitim seçiniz *</label>
+        <select name="title" required>
+            <option value="Expericence">Expericence</option>
+            <option value="Education">Education</option>
+        </select>
+    </div>
+    <button class="btn btn-info">Ekle</button>
+</form>

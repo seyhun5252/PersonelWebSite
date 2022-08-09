@@ -1,0 +1,47 @@
+﻿@model EntityLayer.Abstract.About
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<h1>EgitimGüncelle</h1>
+<br />
+<form class="form-group" method="post" enctype="multipart/form-data">
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.AboutId, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.AboutTitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.AboutDescription, 10, 3, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.AboutName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Okulu")
+    @Html.TextBoxFor(x => x.AboutDegree, new { @class = "form-control" })
+    <br />
+    @Html.Label("Numara")
+    @Html.TextBoxFor(x => x.AboutPhone, new { @class = "form-control" })
+    <br />
+    @Html.Label("Adress")
+    @Html.TextBoxFor(x => x.AboutAdress, new { @class = "form-control" })
+    <br />
+    @Html.Label("Doğum Günü")
+    @Html.TextBoxFor(x => x.AboutBirthday, new { @class = "form-control" })
+    <br />
+    @Html.Label("Mail")
+    @Html.TextBoxFor(x => x.AboutEmail, new { @class = "form-control" })
+    <br />
+    @Html.Label("Dosya")
+    @Html.TextBoxFor(x => x.Url, new { @class = "form-control",type="file" })
+    <br />
+
+    <button class="btn btn-info">Güncelle</button>
+
+
+
+</form>

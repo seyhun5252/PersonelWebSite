@@ -1,0 +1,39 @@
+﻿@using EntityLayer.Abstract
+@model List<EducationAndExpericence>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Eğitim Alanı</h1>
+
+
+<table class="table table-bordered">
+    <tr>
+
+        <th>Başlık</th>
+        <th>Küçük Başlık</th>
+        <th>Açıklama</th>
+        <th>Durumu</th>
+        <th>Tarih aralığı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EducationAndExpericenceTitle</td>
+            <td>@item.EducationAndExpericenceLittleTitle</td>
+            <td>@item.EducationAndExpericenceDescription</td>
+            <td>@item.EducationAndExpericenceStatus</td>
+            <td>@item.EducationAndExpericenceDate</td>
+            <td>
+                @Html.ActionLink("SİL", "Delete", "Egitim", new { area = "Member", id = item.EducationAndExpericenceID })
+            </td>
+        <td>
+            @Html.ActionLink("Güncelle", "EgitimGüncelle", "Egitim", new { area = "Member",id =  item.EducationAndExpericenceID})
+                </td>
+        </tr>
+    }@*571632Reis.*@
+</table>
+

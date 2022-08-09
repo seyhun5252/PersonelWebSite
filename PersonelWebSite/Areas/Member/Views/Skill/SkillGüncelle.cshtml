@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Abstract.Skil
+
+@{
+    ViewData["Title"] = "SkillGüncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>EgitimGüncelle</h1>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.SkilsID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.SkilsTitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Oran")
+    @Html.TextAreaFor(x => x.SkilsRatio, 10, 3, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Güncelle</button>
+
+
+
+</form>

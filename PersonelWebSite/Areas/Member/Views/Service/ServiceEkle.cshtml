@@ -1,0 +1,19 @@
+﻿@using EntityLayer.Abstract
+@model Service
+@{
+    ViewData["Title"] = "ServiceEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>ServiceEkle</h1>
+
+<form class="form-group m-4" method="post">
+    @Html.LabelFor(x => x.ServicesTitle)
+    @Html.TextBoxFor(x => x.ServicesTitle, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.ServicesDescription)
+    @Html.TextBoxFor(x => x.ServicesDescription, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Ekle</button>
+</form>
